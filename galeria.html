@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perez_Car_Wash</title>
+    <link rel="stylesheet" href="/css/normalice.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script defer src="js/app.js"></script>
+</head>
+<body>
+
+    <header class="topheader menu-fijo">
+        <nav class="topnav">
+          <a href="index.html" class="logo">
+            <img height="50" width="50" src="img/logo.jpg" alt="programador"/>
+            <div class="logotype">
+              <p>Perez Car Wash</p>
+            </div>
+          </a>
+          <button class="open-menu" aria-label="Abrir menú">
+            <img height="50" width="50" src="img/Hamburger_icon.svg.png" alt="abrir menú" />
+          </button>
+          <ul class="menu">
+            <button class="close-menu" aria-label="Cerrar menú">
+              <img height="50" width="50" src="img/close_icon.png" alt="cerrar menú" />
+            </button>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="https://www.google.com/maps/dir/?api=1&destination=19.133076183877%2C-98.761918544769&fbclid=IwAR2nDpdHjCHlB0ZTEtRr__ohgVvMewEBeKFpds0FE-GHs0Samye6Zkjhjzw" target="_blank">Como Llegar</a></li>
+          </ul>
+        </nav>
+      </header>
+    
+    
+    
+    <div class="wrapper-contenido contenedor">
+        <h1 class="texto-imagen">Galeria</h1>
+        <div class="galeria">
+            <img src="img/imagen2.jpg" alt="">
+            <img src="img/imagen9.jpg" alt="">
+            <img src="img/imagen27.jpg" alt="">
+            <img src="img/imagen3.jpg" alt="">
+            <img src="img/imagen4.jpg" alt="">
+            <img src="img/imagen6.jpg" alt="">
+            <img src="img/imagen11.jpg" alt="">
+            <img src="img/imagen19.jpg" alt="">
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <nav class="nav-footer contenedor">
+                <p>Derechos Reservados Perez Car Wash &copy;</p>
+                <a href="tel:55 2532 6665" target="_blank"><i class="fas fa-phone"></i> Teléfono</a>
+                <a href="https://api.whatsapp.com/send?phone=55 2532 6665" target="blank">WhatsApp</a>
+                <a href="https://www.facebook.com/profile.php?id=100057412781195&sk=photos" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="mailto:castro96.a.o@gmail.com" target="_blank"><i class="far fa-envelope"></i> Email</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        posicionarMenu();
+         
+        $(window).scroll(function() {    
+            posicionarMenu();
+        });
+         
+        function posicionarMenu() {
+            var altura_del_header = $('.header').outerHeight(true);
+            var altura_del_menu = $('.menu-fijo').outerHeight(true);
+         
+            if ($(window).scrollTop() >= altura_del_header){
+                $('.menu-fijo').addClass('fixed');
+                $('.wrapper-contenido').css('margin-top', (altura_del_menu) + 'px');
+            } else {
+                $('.menu-fijo').removeClass('fixed');
+                $('.wrapper-contenido').css('margin-top', '0');
+            }
+        }
+         
+        </script>
+</body>
+</html>
