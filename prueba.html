@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perez_Car_Wash</title>
+    <link rel="stylesheet" href="/css/normalice.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+         
+        <div class="menu">
+            <div class="contenedor-navegacion">
+                <nav class="nav-principal contenedor">
+                    <a href="#" class="logo">Inicio</a>
+                    <a href="">Inicio</a>
+                    <a href="">Nosotros</a>
+                    <a href="">Galeria</a>
+                    <a href="">Contacto</a>
+                </nav>
+            </div>
+        </div>
+         
+        <div class="localizacion contenedor">
+            <div class="horario">
+                <h3 class="horario-atencion">Direccion</h3>
+                <div>
+                    <a class="btn" href="cita.html">Realizar Cita</a> 
+                </div>
+            </div>
+
+            <div class="horario">
+                <h3 class="horario-atencion">Direccion</h3>
+                <div data-field="address">
+                    <a class="btn" href="https://www.google.com/maps/dir/19.1335294,-98.7591318/19.1330762,-98.7619185/@19.1329275,-98.7627456,17z/data=!3m1!4b1!4m4!4m3!1m1!4e1!1m0" target="_blank">Como Llegar</a>
+                    <address class="direccion" itemprop="address">
+                        <div>Av Insurgentes, entre Adolfo López y Morelos</div>
+
+                        <div>56900 Amecameca</div>
+                        
+                        <div>Estado de México, México</div>
+                    </address>
+                </div>
+            </div>
+
+            <div class="horario">
+                <h3 class="horario-atencion">Horario de atencion</h3>
+                <div>
+                    <table itemprop="openin-hours">
+                        <tbody>
+                            <tr>
+                                <th class="dias">lunes:</th>
+                                <td class="horas">
+                                    <span class="hora">9am - 6pm</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="dias">martes:</th>
+                                <td class="horas">
+                                    <span class="hora">9am - 6pm</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="dias">miercoles:</th>
+                                <td class="horas">
+                                    <span class="hora">9am - 6pm</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="dias">jueves:</th>
+                                <td class="horas">
+                                    <span class="hora">9am - 6pm</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="dias">viernes:</th>
+                                <td class="horas">
+                                    <span class="hora">9am - 6pm</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="dias">sabado:</th>
+                                <td class="horas">
+                                    <span class="hora">9am - 6pm</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="dias">domingo:</th>
+                                <td class="horas">
+                                    <span class="hora">9am - 6pm</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+
+
+    <footer>
+        <div class="footer">
+            <nav class="nav-footer contenedor">
+                <p>Derechos Reservados Perez Car Wash &copy;</p>
+                <a href="tel:55 2532 6665" target="_blank"><i class="fas fa-phone"></i> Teléfono</a>
+                <a href="https://api.whatsapp.com/send?phone=55 2532 6665" target="blank">WhatsApp</a>
+                <a href="https://www.facebook.com/profile.php?id=100057412781195&sk=photos" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="mailto:castro96.a.o@gmail.com" target="_blank"><i class="far fa-envelope"></i> Email</a>
+            </nav>
+        </div>
+    </footer>
+
+
+<script>
+posicionarMenu();
+ 
+$(window).scroll(function() {    
+    posicionarMenu();
+});
+ 
+function posicionarMenu() {
+    var altura_del_header = $('.header').outerHeight(true);
+    var altura_del_menu = $('.menu').outerHeight(true);
+ 
+    if ($(window).scrollTop() >= altura_del_header){
+        $('.menu').addClass('fixed');
+        $('.wrapper').css('margin-top', (altura_del_menu) + 'px');
+    } else {
+        $('.menu').removeClass('fixed');
+        $('.wrapper').css('margin-top', '0');
+    }
+}
+ 
+</script>
+
+
+
+</body>
+</html>
